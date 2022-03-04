@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:07:48 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/02 13:59:24 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/02 16:40:43 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int ac, char **av)
 		ft_get_param(ac, av, &param);
 		ft_init_tab_philo(&param);
 		ft_create_thread(&param);
-		free(param.tab_philo);
+		free(param.tab);
 	}
 	return (0);
 }

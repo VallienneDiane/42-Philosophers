@@ -6,7 +6,7 @@
 #    By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/21 16:44:45 by dvallien          #+#    #+#              #
-#    Updated: 2022/02/24 16:26:21 by dvallien         ###   ########.fr        #
+#    Updated: 2022/03/04 14:10:50 by dvallien         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,8 +20,9 @@ LST_SRCS := main.c				\
 			ft_init_tab_philo.c	\
 			ft_create_thread.c	\
 			ft_actions.c		\
+			ft_check.c			\
 			ft_start_time.c		\
-			ft_mutex_lock.c		\
+			ft_destroy_mutex.c	\
 
 LST_OBJS := $(LST_SRCS:.c=.o)
 

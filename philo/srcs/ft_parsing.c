@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:37:19 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/02 10:29:06 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/02 16:39:41 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,4 +61,3 @@ void	ft_get_param(int ac, char **av, t_param *param)
 	if (ac == 6)
 		param->nb_must_eat = ft_atoi(av[5]);
 }
-

@@ -1,25 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_mutex_lock.c                                    :+:      :+:    :+:   */
+/*   ft_destroy_mutex.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/24 14:43:40 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/02 13:53:02 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/04 17:44:20 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/philo.h"
 
-void	ft_unlock_destroy(t_philo *philo)
+void	ft_destroy_mutex(t_philo *philo)
 {
 	int	i;
 
 	i = -1;
-	while (++i < philo->param->nb_philo)
+	while (++i < philo->p->nb_philo)
 	{
-		pthread_mutex_unlock(&philo->param->tab_philo[i].fork);
-		pthread_mutex_destroy(&philo->param->tab_philo[i].fork);
+		pthread_mutex_destroy(&philo->p->tab[i].fork);
 	}
 }
