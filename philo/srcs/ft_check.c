@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/04 14:07:45 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/04 17:43:29 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/07 16:10:32 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	ft_check_death(t_philo *philo)
 		}
 		pthread_mutex_unlock(&philo->p->tab[i].death);
 	}
-	if ((ft_ms() - philo->time_last_meal) > philo->p->time_to_die)
+	if ((ft_ms() - philo->time_last_meal) >= philo->p->time_to_die)
 	{
 		pthread_mutex_lock(&philo->death);
 		philo->lock_dead = 1;
@@ -46,7 +46,7 @@ int	ft_check_nb_meal(t_philo *philo)
 	while (++i < philo->p->nb_philo)
 	{
 		pthread_mutex_lock(&philo->p->tab[i].meal);
-		if (philo->p->tab[i].nb_meal < philo->p->nb_must_eat)
+		if (philo->p->tab[i].nb_meal <= philo->p->nb_must_eat)
 		{
 			pthread_mutex_unlock(&philo->p->tab[i].meal);
 			return (0);
@@ -54,4 +54,12 @@ int	ft_check_nb_meal(t_philo *philo)
 		pthread_mutex_unlock(&philo->p->tab[i].meal);
 	}
 	return (1);
+}
+
+void	ft_usleep(t_philo *philo)
+{
+	if (philo->p->nb_philo > 40)
+		usleep(1 * 1000);
+	else
+		usleep(1 * 100);
 }

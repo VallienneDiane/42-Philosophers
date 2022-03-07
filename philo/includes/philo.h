@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:09:23 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/04 17:41:35 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/07 15:03:19 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void		ft_get_param(int ac, char **av, t_param *param);
 int			ft_init_tab_philo(t_param *param);
 void		ft_init_mutex(t_philo *philo);
 int			ft_create_thread(t_param *param);
+void		ft_actions(t_philo *phil);
 void		*ft_routine(void *philo);
 long int	ft_atoi(const char *str);
 int			ft_philo_eat(t_philo *philo);
@@ -63,4 +64,5 @@ int			ft_ms(void);
 void		ft_destroy_mutex(t_philo *philo);
 int			ft_check_death(t_philo *philo);
 int			ft_check_nb_meal(t_philo *philo);
+void		ft_usleep(t_philo *philo);
 #endif

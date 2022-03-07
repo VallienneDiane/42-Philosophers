@@ -6,7 +6,7 @@
 #    By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/21 16:44:45 by dvallien          #+#    #+#              #
-#    Updated: 2022/03/04 14:10:50 by dvallien         ###   ########.fr        #
+#    Updated: 2022/03/07 14:38:28 by dvallien         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,9 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	$(CC) $(CFLAGS) $^ -o $@
 
-$(DIR_OBJS)/%.o: $(DIR_SRCS)/%.c $(DIR_INCS)
+$(DIR_OBJS)/%.o: $(DIR_SRCS)/%.c $(INCS)
 	mkdir -p $(DIR_OBJS)
-	$(CC) $(CFLAGS) -I$(DIR_INCS) -c $< -o $@
+	$(CC) $(CFLAGS) -I $(DIR_INCS) -c $< -o $@
 
 clean:
 	$(RM) $(DIR_OBJS)
