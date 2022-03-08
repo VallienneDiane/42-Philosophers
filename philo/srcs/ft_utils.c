@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 11:02:08 by dvallien          #+#    #+#             */
-/*   Updated: 2022/02/22 11:03:13 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/08 17:21:34 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ long int	ft_atoi(const char *str)
 	i = 0;
 	result = 0;
 	sign = 1;
+	while (str[i] == ' ')
+		i++;
 	if (str[i] == '-' || str[i] == '+')
 	{
 		if (str[i] == '-')

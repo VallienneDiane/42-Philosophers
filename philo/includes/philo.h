@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:09:23 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/07 15:03:19 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/08 18:03:58 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,9 @@ typedef struct s_philo
 
 int			main(int ac, char **av);
 int			ft_parsing(int ac, char **av);
-int			ft_nbr_args(int ac);
-int			ft_is_ms(char **av);
+int			ft_check_nb_args(int ac);
+int			ft_check_empty(char *av);
+int			ft_check_args(char *av);
 void		ft_get_param(int ac, char **av, t_param *param);
 int			ft_init_tab_philo(t_param *param);
 void		ft_init_mutex(t_philo *philo);
@@ -60,9 +61,9 @@ int			ft_philo_sleep(t_philo *philo);
 int			ft_philo_think(t_philo *philo);
 int			ft_first_fork(t_philo *philo);
 int			ft_second_fork(t_philo *philo);
-int			ft_ms(void);
 void		ft_destroy_mutex(t_philo *philo);
 int			ft_check_death(t_philo *philo);
 int			ft_check_nb_meal(t_philo *philo);
+int			ft_ms(void);
 void		ft_usleep(t_philo *philo);
 #endif
