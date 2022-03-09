@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:37:19 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/08 18:13:35 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/09 11:01:01 by dvallien         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ int	ft_check_args(char *av)
 		i++;
 	if (av[i] == 0)
 		return (0);
-	printf("Error : should be a (positiv) number");
+	printf("Error : should be a (positiv) number\n");
 	return (1);
 }
 
