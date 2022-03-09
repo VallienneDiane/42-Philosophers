@@ -6,11 +6,21 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/22 12:09:24 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/08 11:08:02 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/09 13:52:39 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/philo.h"
+
+void	ft_get_param(int ac, char **av, t_param *param)
+{
+	param->nb_philo = ft_atoi(av[1]);
+	param->time_to_die = ft_atoi(av[2]);
+	param->time_to_eat = ft_atoi(av[3]);
+	param->time_to_sleep = ft_atoi(av[4]);
+	if (ac == 6)
+		param->nb_must_eat = ft_atoi(av[5]);
+}
 
 int	ft_init_tab_philo(t_param *param)
 {

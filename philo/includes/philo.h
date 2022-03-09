@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:09:23 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/08 18:03:58 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/09 13:57:38 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 # include <unistd.h>
 # include <pthread.h>
 # include <sys/time.h>
+# include <limits.h>
 
 typedef struct s_param
 {
