@@ -6,7 +6,7 @@
 /*   By: dvallien <dvallien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 11:37:19 by dvallien          #+#    #+#             */
-/*   Updated: 2022/03/09 14:00:52 by dvallien         ###   ########.fr       */
+/*   Updated: 2022/03/09 10:25:01 by dvallien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,11 +30,6 @@ int	ft_parsing(int ac, char **av)
 			return (1);
 		if (ft_check_args(av[i]) == 1)
 			return (1);
-		if (ft_atoi(av[i]) > INT_MAX)
-		{
-			printf("Error : number higher than int max\n");
-			return (1);
-		}
 	}
 	return (0);
 }
@@ -78,4 +73,14 @@ int	ft_check_args(char *av)
 		return (0);
 	printf("Error : should be a (positiv) number\n");
 	return (1);
+}
+
+void	ft_get_param(int ac, char **av, t_param *param)
+{
+	param->nb_philo = ft_atoi(av[1]);
+	param->time_to_die = ft_atoi(av[2]);
+	param->time_to_eat = ft_atoi(av[3]);
+	param->time_to_sleep = ft_atoi(av[4]);
+	if (ac == 6)
+		param->nb_must_eat = ft_atoi(av[5]);
 }
